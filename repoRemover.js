@@ -35,17 +35,16 @@ const getRepos = async () => {
   } catch (error) {
     console.log(error);
   }
-  
-
 }
-// getRepos()
+
 const getReposBySomeCriteria = () => {
   const repos = require('./repos');
   const repoNames = repos.map((repo)=>{
    if (repo.git_url.includes('000')) return repo.name
  })
-console.log("1111111111111", repoNames);
-return repoNames;
+  
+  console.log('Repo Names', repoNames);
+  return repoNames;
 }
 
 // runDeletes(repoNames);
